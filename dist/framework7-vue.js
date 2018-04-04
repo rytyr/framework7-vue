@@ -3,13 +3,13 @@
  * Build full featured iOS & Android apps using Framework7 & Vue
  * http://www.framework7.io/vue/
  * 
- * Copyright 2017, Vladimir Kharlampidi
+ * Copyright 2018, Vladimir Kharlampidi
  * The iDangero.us
  * http://www.idangero.us/
  * 
  * Licensed under MIT
  * 
- * Released on: November 30, 2017
+ * Released on: April 4, 2018
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -2347,7 +2347,8 @@ var Progressbar = {
       }, [
         c('span', {
           style: {
-            'transform': progress ? 'translate3d(' + (-100 + progress) + '%,0,0)' : ''
+            'transform': progress ? 'translate3d(' + (-100 + progress) + '%,0,0)' : '',
+            '-webkit-transform': progress ? 'translate3d(' + (-100 + progress) + '%,0,0)' : ''
           }
         })
       ]);
@@ -4819,6 +4820,7 @@ var framework7Vue = {
     Vue.prototype.Template7 = window.Template7;
     Vue.prototype.$t7 = window.Template7;
     Vue.prototype.$device = window.Framework7.prototype.device;
+    Vue.prototype.$f7hub = eventHub;
 
     // Theme
     var theme = {

@@ -105,6 +105,7 @@ export default {
     Vue.prototype.Template7 = window.Template7;
     Vue.prototype.$t7 = window.Template7;
     Vue.prototype.$device = window.Framework7.prototype.device;
+    Vue.prototype.$f7hub = eventHub;
 
     // Theme
     var theme = {
